@@ -26,3 +26,11 @@
 
 [Vite CSS Modules](https://vitejs.dev/guide/features.html#css-modules)
 
+## Icons:
+
+[Phosphoricons](https://phosphoricons.com/)
+
+[Phosphoricons Github](https://github.com/phosphor-icons/phosphor-home#react)
+
+    `npm i phosphor-react`
+
