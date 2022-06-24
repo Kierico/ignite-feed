@@ -20,3 +20,9 @@
 
     `npm run dev`
 
+## CSS Modules:
+
+[CSS Modules](https://github.com/css-modules/css-modules)
+
+[Vite CSS Modules](https://vitejs.dev/guide/features.html#css-modules)
+

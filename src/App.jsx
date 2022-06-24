@@ -1,8 +1,16 @@
-function App() {
+import React from "react"
+import { Header } from "./components/Header"
+import { Post } from "./Post"
+
+export function App() {
 
   return (
-    <h1>Hello World</h1>
+    <React.Fragment>
+      <Header />
+      <Post
+        author="Kiérico"
+        content="Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação."
+      />
+    </React.Fragment>
   )
 }
-
-export default App
