@@ -1,4 +1,4 @@
 .header {
-    background-color: #333;
+    background-color: var(--gray-600);
     height: 80px;
 }
