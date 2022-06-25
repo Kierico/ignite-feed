@@ -17,6 +17,10 @@ export function App() {
             author="Kiérico"
             content="Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação."
           />
+          <Post
+            author="Kiérico"
+            content="Olá, tenho 37 anos, sou estudante do curso de Ciência da Computação."
+          />
         </main>
       </div>
     </React.Fragment>

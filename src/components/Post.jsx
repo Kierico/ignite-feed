@@ -17,8 +17,10 @@ export function Post() {
             <div className={styles.content}>
                 <p>Fala galera 👋</p>
                 <p>Acabei de subir este projeto no meu portfólio. É um projeto top.</p>
-                <p>👉 <a href="https://github.com/kierico">Github/Kierico</a></p>
-                <p><a href="#">#novoprojeto</a></p>
+                <p>👉{" "}<a href="https://github.com/kierico">Github/Kierico</a></p>
+                <p>
+                    <a href="#">#novoprojeto</a>{" "}
+                    <a href="#">#kierico</a></p>
             </div>
         </article>
     );
