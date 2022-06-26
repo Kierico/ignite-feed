@@ -1,29 +1,44 @@
+import { format, formatDistanceToNow } from "date-fns";
+import ptBR from "date-fns/locale/pt-BR";
+
 import { Comment } from "./Comment";
 import { Avatar } from "./Avatar";
 import styles from "./Post.module.css";
 
-export function Post(props) {
+export function Post({ author, content, publishedAt }) {
+
+    const publishedDateFormatted = format(publishedAt, "dd 'de' LLLL 'de' yyyy 'às' HH:mm'h'", {
+        locale: ptBR,
+    });
+
+    const publishedDateRelativeToNow = formatDistanceToNow(publishedAt, {
+        locale: ptBR,
+        addSuffix: true,
+    })
+
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://github.com/kierico.png" />
+                    <Avatar src={author.avatarUrl} />
                     <div className={styles.authorInfo}>
-                        <strong>Kiérico Souza</strong>
-                        <span>Web Developer</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
-                <time title="24 de Junho de 2022 às 18:27h" dateTime="2022-06-24 18:27:00">Publicado há 1h</time>
+                <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>
+                    {publishedDateRelativeToNow}
+                </time>
             </header>
 
             <div className={styles.content}>
-                <p>Fala galera 👋</p>
-                <p>Acabei de subir este projeto no meu portfólio. É um projeto top.</p>
-                <p>👉{" "}<a href="https://github.com/kierico">Github/Kierico</a></p>
-                <p>
-                    <a href="#">#novoprojeto</a>{" "}
-                    <a href="#">#kierico</a>
-                </p>
+                {content.map(paragraph => {
+                    if (paragraph.type === "paragraph") {
+                        return <p>{paragraph.content}</p>
+                    } else if (paragraph.type === "link") {
+                        return <p><a href="https://github.com/kierico" target="_black">{paragraph.content}</a></p>
+                    }
+                })}
             </div>
 
             <form className={styles.commentForm}>

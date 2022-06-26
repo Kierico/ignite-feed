@@ -34,3 +34,7 @@
 
     `npm i phosphor-react`
 
+## [ <img style="width: 50px; background-color: #770c56; border-radius: 50%;" src="https://date-fns.org/static/7ceafe855b131d457fe7de810ed31e0f.svg"/> ](https://date-fns.org/v2.28.0/docs/format) date-fns
+
+    `npm i date-fns`
+

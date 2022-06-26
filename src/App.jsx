@@ -11,17 +11,16 @@ const posts = [
     author: {
       avatarUrl: "https://github.com/kierico.png",
       name: "Kiérico Souza",
-      role: "Web Developer"
+      role: "Web Developer",
     },
     content: [
       { type: "paragraph", content: "Fala galera 👋" },
 
       { type: "paragraph", content: "Acabei de subir este projeto no meu portfólio. É um projeto top." },
 
-      { type: "link", content: '👉{ " " }<a href="https://github.com/kierico">Github/Kierico</a>' },
+      { type: "link", content: '👉 Github/Kierico' },
 
-      { type: "link", content: '<a href="#">#novoprojeto</a>{ " " }' },
-      { type: "link", content: '< a href = "#" > #kierico</a >' }
+      { type: "link", content: '#kierico' },
     ],
     publishedAt: new Date("2022-06-26 11:30:00"),
   },
@@ -30,20 +29,20 @@ const posts = [
     author: {
       avatarUrl: "https://github.com/kierico.png",
       name: "Lucila Souza",
-      role: "Student"
+      role: "Student",
     },
     content: [
       { type: "paragraph", content: "Fala galera 👋" },
 
       { type: "paragraph", content: "Acabei de subir este projeto no meu portfólio. É um projeto top." },
 
-      { type: "link", content: '👉{ " " }<a href="https://github.com/kierico">Github/Kierico</a>' },
+      { type: "link", content: '👉 Github/Lucila' },
 
-      { type: "link", content: '<a href="#">#novoprojeto</a>{ " " }' },
-      { type: "link", content: '< a href = "#" > #lucila</a >' }
+      { type: "link", content: '#Lucila' },
     ],
-    publishedAt: new Date("2022-06-26 11:33:00"),
+    publishedAt: new Date("2022-06-26 11:30:00"),
   },
+
 ];
 
 export function App() {
