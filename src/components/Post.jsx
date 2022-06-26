@@ -2,7 +2,7 @@ import { Comment } from "./Comment";
 import { Avatar } from "./Avatar";
 import styles from "./Post.module.css";
 
-export function Post() {
+export function Post(props) {
     return (
         <article className={styles.post}>
             <header>
@@ -22,7 +22,8 @@ export function Post() {
                 <p>👉{" "}<a href="https://github.com/kierico">Github/Kierico</a></p>
                 <p>
                     <a href="#">#novoprojeto</a>{" "}
-                    <a href="#">#kierico</a></p>
+                    <a href="#">#kierico</a>
+                </p>
             </div>
 
             <form className={styles.commentForm}>
