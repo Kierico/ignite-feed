@@ -38,3 +38,35 @@
 
     `npm i date-fns`
 
+## Entendendo Closures no React:
+
+```js
+    /** 1ª FORMA */
+    const [likeCount, setLikeCount] = useState(0);
+
+    function handleLikeComment() {
+        const newLikeCount = likeCount + 1;
+
+        setLikeCount((like) => {
+            return like + 1;
+        });
+
+        /** de dois em dois: */
+        setLikeCount((like) => {
+            return like + 1;
+        });
+    }
+    
+    /** 2ª FORMA */
+    const [likeCount, setLikeCount] = useState(0);
+
+    function handleLikeComment() {
+        const newLikeCount = likeCount + 1;
+        
+        setLikeCount(newLikeCount);
+
+        /** de dois em dois: */
+        setLikeCount(newLikeCount + 1);
+    }
+```
+
